@@ -24,7 +24,7 @@ namespace tbaricault::str
         }
         if (i < str.length())
             result.emplace_back(str.substr(i));
-        return (result);
+        return result;
     }
 
     std::string join(std::span<std::string_view> strs, std::string_view separator)
@@ -36,7 +36,7 @@ namespace tbaricault::str
                 result += separator;
             result += strs[i];
         }
-        return (result);
+        return result;
     }
 
     std::string repeat(std::string_view str, std::size_t n)
@@ -44,7 +44,7 @@ namespace tbaricault::str
         std::string result;
         for (std::size_t i = 0; i < n; i++)
             result += str;
-        return (result);
+        return result;
     }
 
     std::string indent(std::string_view str, std::size_t indent, bool useTabs)
@@ -57,7 +57,7 @@ namespace tbaricault::str
                 result += '\n';
             result += std::string(indent, useTabs ? '\t' : ' ') + lines.at(i);
         }
-        return (result);
+        return result;
     }
 
 }

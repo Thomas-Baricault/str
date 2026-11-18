@@ -27,7 +27,7 @@ namespace tbaricault::str
             else
                 result += tolower(c);
         }
-        return (result);
+        return result;
     }
 
     std::string snakeToPascal(std::string_view str)
@@ -46,7 +46,7 @@ namespace tbaricault::str
             else
                 result += tolower(c);
         }
-        return (result);
+        return result;
     }
 
     std::string camelToSnake(std::string_view str)
@@ -58,16 +58,16 @@ namespace tbaricault::str
                 result += '_';
             result += tolower(c);
         }
-        return (result);
+        return result;
     }
 
     std::string camelToPascal(std::string_view str)
     {
         if (str.empty())
-            return ("");
+            return "";
         std::string result(str);
         result[0] = toupper(result[0]);
-        return (result);
+        return result;
     }
 
     std::string pascalToSnake(std::string_view str)
@@ -81,16 +81,16 @@ namespace tbaricault::str
             result += tolower(c);
             first = false;
         }
-        return (result);
+        return result;
     }
 
     std::string pascalToCamel(std::string_view str)
     {
         if (str.empty())
-            return ("");
+            return "";
         std::string result(str);
         result[0] = tolower(result[0]);
-        return (result);
+        return result;
     }
 
 }

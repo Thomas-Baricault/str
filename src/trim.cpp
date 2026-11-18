@@ -15,7 +15,7 @@ namespace tbaricault::str
     {
         std::size_t i = str.find_first_not_of(set);
         if (i == std::string::npos)
-            return ("");
+            return "";
         return std::string(str.substr(i));
     }
 
@@ -23,7 +23,7 @@ namespace tbaricault::str
     {
         std::size_t i = str.find_last_not_of(set);
         if (i == std::string::npos)
-            return ("");
+            return "";
         return std::string(str.substr(0, i + 1));
     }
 
@@ -31,7 +31,7 @@ namespace tbaricault::str
     {
         std::size_t i = str.find_first_not_of(set);
         if (i == std::string::npos)
-            return ("");
+            return "";
         std::size_t j = str.find_last_not_of(set);
         return std::string(str.substr(i, j - i + 1));
     }
